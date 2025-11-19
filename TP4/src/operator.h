@@ -12,3 +12,5 @@ int ou(int num1, int num2);    // OR bit-à-bit
 int negation(int num1);        // ~ (bit-à-bit) sur le premier nombre
 
 #endif
+
+
