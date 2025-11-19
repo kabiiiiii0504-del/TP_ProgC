@@ -7,33 +7,52 @@ int main() {
     char concat[100];
 
     int i = 0;
-    int longueur = 0;
 
     // ------------------------------
-    // 1. Calcul de longueur de chaine1
+    // 1. Calcul manuel de la longueur
     // ------------------------------
+    int longueur = 0;
     while (chaine1[longueur] != '\0') {
         longueur++;
     }
 
-    printf("Longueur de \"%s\" : %d\n", chaine1, longueur);
+    printf("Longueur de chaine1 : %d\n", longueur);
 
     // ------------------------------
-    // 2. Copie de chaine1 dans copie
+    // 2. Copie manuelle de chaine1 → copie
     // ------------------------------
     i = 0;
     while (chaine1[i] != '\0') {
         copie[i] = chaine1[i];
         i++;
     }
-    copie[i] = '\0'; // fin de chaîne obligatoire
+    copie[i] = '\0';
 
     printf("Copie : %s\n", copie);
 
     // ------------------------------
-    // 3. Concaténation de chaine1 + chaine2 dans concat
+    // 3. Concaténation manuelle : chaine1 + chaine2 → concat
     // ------------------------------
+
     int j = 0;
 
-    // Copie de chaine1 dans concat
-    while (chaine1
+    // Copier chaine1
+    while (chaine1[j] != '\0') {
+        concat[j] = chaine1[j];
+        j++;
+    }
+
+    // Ajouter chaine2
+    int k = 0;
+    while (chaine2[k] != '\0') {
+        concat[j] = chaine2[k];
+        j++;
+        k++;
+    }
+
+    concat[j] = '\0';
+
+    printf("Concaténation : %s\n", concat);
+
+    return 0;
+}
